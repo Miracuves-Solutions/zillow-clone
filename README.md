@@ -1,327 +1,119 @@
-# Zillow Clone — White-Label Solution by Miracuves
+# Zillow Clone — White-Label Real Estate Marketplace Platform by Miracuves
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Try_Now-e8344f?style=for-the-badge)](https://mxestate.mimeld.com)
-[![Solution Page](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/zillow-clone/)
+[![Website](https://img.shields.io/badge/Solution_Page-miracuves.com-0b0b10?style=for-the-badge)](https://miracuves.com/zillow-clone/)
 [![Delivery](https://img.shields.io/badge/Go_Live-6_Working_Days-2ecc8f?style=for-the-badge)](https://miracuves.com/zillow-clone/#pricing)
 [![Support](https://img.shields.io/badge/Support-60_Days_+_12mo_Updates-blue?style=for-the-badge)](https://miracuves.com/facts/)
 
+**MXEstate** is a production-ready, white-label Zillow clone: a complete real estate marketplace with buyer, agent, and admin panels — delivered with **100% source code ownership** in **6 working days**.
+
+> 🏘️ **See it running before you talk to anyone.** Live buyer app, agent dashboard, and admin console — demo credentials are printed on the [solution page](https://miracuves.com/zillow-clone#demo). No sales call required.
+
 ---
 
-## Table of Contents
-
-1. [Who Is This For?](#who-is-this-for)
-2. [How It Works](#how-it-works)
-3. [Core Features](#core-features)
-4. [Architecture](#architecture)
-5. [Revenue Streams](#revenue-streams)
-6. [What's Included](#whats-included)
-7. [Deployment Timeline](#deployment-timeline)
-8. [Why Not Build From Scratch?](#why-not-build-from-scratch)
-9. [Market Opportunity](#market-opportunity)
-10. [Client Testimonials](#client-testimonials)
-11. [FAQ](#faq)
-12. [Resources](#resources)
-13. [About Miracuves](#about-miracuves)
-
-## Live Demos
+## 🚀 Live Demos
 
 | Environment | URL | What you can test |
 |---|---|---|
-| Web Platform | [mxestate.mimeld.com](https://mxestate.mimeld.com) | Full experience in the browser |
-| Mobile App (Android) | [mas.mimeld.com](https://mas.mimeld.com) | Browse, transact, engage |
-| Admin Dashboard | [Solution page → Demo](https://miracuves.com/zillow-clone/#demo) | Users, content, plans, analytics |
+| 📱 Buyer App | [mas.mimeld.com](https://mas.mimeld.com) | Search listings, save, schedule tours, mortgage |
+| 🌐 Web Search | [mxestate.mimeld.com](https://mxestate.mimeld.com) | Map search, filters, listings, schools, commute |
+| 🏡 Agent Dashboard | [Solution page → Demo](https://miracuves.com/zillow-clone#demo) | Listings, leads, CRM, calendar, analytics |
+| 🛠️ Admin Console | [Solution page → Demo](https://miracuves.com/zillow-clone#demo) | Agents, listings, lead routing, analytics |
 
-Demo credentials: [miracuves.com/zillow-clone -> Demo section](https://miracuves.com/zillow-clone/#demo)
-
-## What Makes This Zillow Clone Different
-
-<!-- TODO: fill 3-5 vertical-specific differentiators -->
-
-## Who Is This For?
-
-| Buyer Type | Use Case |
-|---|---|
-| Startup founders | Launch |
-| Agencies | White-label |
+Demo credentials for all environments: **[miracuves.com/zillow-clone → Demo section](https://miracuves.com/zillow-clone/#demo)**
 
 ---
 
-## How It Works
+## ✨ What Makes This Zillow Clone Different
 
-1. User opens
-2. Selects
-3. Completes
-4. Pay
-5. Confirm
+Most real estate scripts stop at "list + view." This platform ships with the features that actually run a property *business*:
 
----
+- **Map-First Search** — polygon-draw, school districts, commute-time filters — same map-search UX Zillow and Redfin built
+- **Lead Routing Engine** — 
+- **3D Tour Embedding** — zip-code-based, round-robin, performance-weighted agent routing — same lead-routing engine Realtor.com and Zillow use
+- **Mortgage Pre-Qualification** — supports listings across regions with locale-aware price, currency, and measurement units
+- **Multi-Country Property Data** — integrated lenders and pre-qualification flows — what converts visits into contracts
 
-## Core Features
+## 📦 Core Features
 
-### User App
-- Property search
-- Map-based discovery
-- Save favorites
-- Contact agent
-- Virtual tours
-- Mortgage calculator
+**Buyer / Renter:** map-based search · advanced filters · saved searches · school & commute data · schedule tours · mortgage calculator · favorites · agent messaging
 
-### Agent Panel
-- Listing management
-- Lead management
-- Analytics dashboard
+**Agent:** lead inbox · CRM pipeline · listing wizard · tour scheduler · buyer match · performance analytics · payouts
 
-### Admin Panel
-- Property verification
-- User management
-- Featured listings
-- Revenue reports
+**Admin:** agent verification · lead routing · listing moderation · ad placement · analytics reports
 
----
-
-## Advanced Features
-
-The platform integrates AI-powered features that reduce manual overhead and capture revenue opportunities:
-
-- **AI Engine** - Automation
-- **AI Property Valuation** - Automated home value estimates
-- **AI Matching** - Matches buyers with ideal properties
-- **AI Insights** - Market trend analysis
-
----
-
-## Apps and Web Panels
-
-| Module | Description |
-|---|---|
-| Buyer | Search,view |
-| Agent | List,manage |
-
----
-
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 flowchart LR
-    A[Flutter Apps<br/>Android · iOS] --> G[REST API<br/>Laravel Backend]
-    W[Web Platform<br/>Responsive] --> G
-    P[Partner Panel] --> G
-    AD[Admin Dashboard] --> G
-    G --> DB[(MySQL)]
-    G --> S3[Object Storage]
+    A[Buyer App<br/>Flutter]
+    B[Web Search<br/>Responsive]
+    W[Agent Dashboard]
+    AD[Admin Console]
+    A --> G[REST API<br/>Node.js]
+    B --> G
+    W --> G
+    AD --> G
+    G --> DB[(PostgreSQL)]
+    G --> ES[Elasticsearch<br/>Property Search]
+    ES --> A
+    ES --> B
+    G --> MAP[Mapbox<br/>Maps & Tiles]
 ```
 
-**Stack:**
+**Stack:** Flutter mobile apps (Android + iOS) · Node.js backend · PostgreSQL + Elasticsearch for property search · Stripe Connect for agent payouts · Mapbox for maps · Stripe Connect, regional gateways, multi-currency
 
-| Layer | Technology |
-|---|---|
-| Mobile | Flutter |
-| Backend | Node.js |
-| DB | MongoDB |
-| Payments | Stripe |
+## 📋 What’s Included
 
----
+- ✅ Full source code — backend, web, mobile apps, panels (no encryption, no license locks)
+- ✅ Deployment to your servers & app store submission assistance
+- ✅ Your branding — white-label rename, logo, colors, domain
+- ✅ 60 days post-launch support + 12 months of free updates
+- ✅ Documentation & handover
 
-## Revenue Streams
+**Pricing:** from **$2,899**, transparent on the [solution page](https://miracuves.com/zillow-clone/#pricing) — no "contact us for quote" games.
 
-The platform is engineered to generate revenue from day one through multiple complementary channels:
+## 🆚 Why Not Build From Scratch?
 
-- Transaction fees
-- Subscription
-- Premium
-- Agent subscription fees
-- Featured listings
-- Lead generation fees
-- Premium buyer tools
-- Advertising revenue
+Custom real estate platforms run $80k–$350k and 5–10 months. A proven white-label base gets you to market in 6 working days for a fraction of that, with your budget preserved for agent onboarding and demand-side marketing.
 
----
+## 📚 Resources
 
-## Security and Compliance
+- 📖 [Zillow Clone — Full Solution Page](https://miracuves.com/zillow-clone) (features, pricing, demos, FAQ)
+- 💰 [How Much Does a Real Estate App Cost in 2026?](https://miracuves.com/zillow-clone#pricing) pricing breakdown & what's included
+- 📝 [Best Zillow Clone Script in 2026](https://miracuves.com/zillow-clone/blog/) features, pricing & launch guide
+- 🧠 [Map-First Search: Why Polygon-Draw Wins for Property](https://miracuves.com/zillow-clone/blog/) lessons from Zillow & Redfin
+- ✅ [Miracuves Facts & Claims Ledger](https://miracuves.com/zillow-clone/facts/) every claim we make, verified
 
-- OTP-based authentication
-- SSL/TLS encrypted API communication
-- GDPR-ready data handling
+## 🏢 About Miracuves
+
+[Miracuves Solutions](https://miracuves.com) builds white-label clone apps and custom software from Mumbai, India — 90+ ready-made solutions, live demos for every product, transparent pricing, and delivery in 6 working days. Operating since 2010.
+
+**Talk to us:** [WhatsApp](https://wa.me/919830009649) · [Schedule a consultation](https://miracuves.com/schedule-consultation/) · [miracuves.com](https://miracuves.com)
 
 ---
 
-## What's Included
+### ⚠️ Note on This Repository
 
-| Plan | Price | What You Get |
-|---|---|---|
-| Standard | **$$2,899** | Complete source code, all apps, admin panel, rebranding, 1 year updates |
-| Enterprise | Custom Quote | Everything in Standard + custom features, multi-region, priority support |
+This repository is a product overview. The full source code is delivered to clients on purchase — see [what’s included](https://miracuves.com/zillow-clone/#included). For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
 
-**What is included:**
-
-- Buyer
-- Agent
-- Full Source Code
-- Complete Rebranding (your logo, colors, app name)
-- Server Deployment
-- App Store and Google Play Submission Support
-- 60 Days Free Bug Support
-- Free 1-Year Updates
+*Keywords: zillow clone, zillow clone script, real estate, property marketplace, white label Zillow, agent CRM, Flutter real estate app, Node.js property*
 
 ---
-**Pricing:** from **$2,899** — transparent on the [solution page](https://miracuves.com/zillow-clone/#pricing).
-
-
-## Deployment Timeline
-
-| Day | Milestone |
-|---|---|
-| Day 1 | Server setup, environment configuration, initial deployment |
-| Day 2 | White-labeling - app name, logo, colors, splash screens |
-| Day 3 | Payment gateway integration + third-party API configuration |
-| Day 4 | Custom feature implementation (if applicable) |
-| Day 5 | QA, testing, bug fixes across all panels |
-| Day 6 | App Store + Google Play submission + Go-live |
-
-> **Average go-live: 6 business days from payment confirmation.**
-
----
-
-## Why Not Build From Scratch?
-
-| Factor | Build from Scratch | Miracuves Solution |
-|---|---|---|
-| Time to Launch | 6-12 months | 6 days |
-| Development Cost | $60,000-$150,000 | From $$2,899 |
-| Source Code Ownership | Yes | Yes |
-| Customization | Full | Full |
-| Post-Launch Support | Depends on team | 60 days included |
-| Risk | High | Low |
-
----
-
-## Market Opportunity
-
-| Metric | Data |
-|---|---|
-| Large Market | Growing |
-
-> Source: Statista, Grand View Research, Allied Market Research
-
----
-
-## Successful Verticals
-
-- On-demand
-- Digital
-- Residential real estate
-- Rental properties
-- Commercial real estate
-- Property management
-- Real estate investment
-
----
-
-## Client Testimonials
-
-> *"Launched in 6 days."*
-> - Founder
-
-> *"Exceptional results from day one."*
-> - Verified Client
-
-> *"Scaled 3x faster than expected."*
-> - Startup Founder
-
----
-
-## FAQ
-
-**Cost?**
-See pricing.
-
-**Source code?**
-Yes.
-
-**Launch?**
-6 days.
-
-**Can I customize the branding?**
-Yes, full white-labeling included.
-
-**Do you provide post-launch support?**
-60 days free bug support included.
-
-**Can I add custom features?**
-Yes, we accommodate custom requests.
-
----
-
-## Related Solutions
-
-Explore our other white-label clone solutions:
-
-- [Trulia Clone](https://github.com/Miracuves-Solutions/trulia-clone)
-
----
-
-## Resources
-
-- [Full Solution Page](https://miracuves.com/zillow-clone/) — features, pricing, demos, FAQ
-
-
-## Get Started
-
-**Ready to launch your real estate marketplace?**
-
-| Channel | Link |
-|---|---|
-| Full Solution Page | [miracuves.com/zillow-clone](https://miracuves.com/zillow-clone/) |
-| Email | info@miracuves.com |
-| WhatsApp | [+91 98300 09649](https://wa.me/919830009649) |
-| Book a Call | [Free Consultation](https://miracuves.com/contact/) |
-
----
-
-## About Miracuves
-
-**Miracuves Solutions Pvt. Ltd.** is a Mumbai-based software company specializing in white-label clone app solutions across 12+ industries.
-
-- 90+ ready-to-deploy solutions
-- 6-day delivery guarantee
-- 60+ engineers on staff
-- 3,900+ apps delivered
-- Full source code ownership
-- Clients across 40+ countries including India and USA
-
-[Explore all 90+ solutions at miracuves.com](https://miracuves.com)
-
----
-
-## Disclaimer
-
-This product is independently developed by Miracuves. All product names, logos, and brands are property of their respective owners. Use of these names does not imply endorsement.
-
----
-
-<div align="center">
-
-*(c) 2026 Miracuves Solutions Pvt. Ltd. | Mumbai, India*
-*This repository contains product documentation only - no proprietary source code is published here.*
-
-</div>
-
-
-*Keywords: zillow clone, zillow script, white label solution, laravel flutter app, clone script*
-
-
-
----
-
-### Note on This Repository
-
-This repository is a product overview. The full source code is delivered to clients on purchase. For a hands-on evaluation, use the live demos above; credentials are public on the solution page.
-
 
 <!--
-=========================================================
-GENERATED FROM MIRACUVES NETFLIX-CLONE README TEMPLATE
-Canon: 6 working days, from $2,799 floor, 60 days support + 12 months updates.
-Never use 3 days. See https://miracuves.com/facts/ for audited claims.
-=========================================================
+══════════════════════════════════════════════════
+TEMPLATE VARIABLE KEY — auto-generated from Netflix-Clone pattern
+══════════════════════════════════════════════════
+{APP_NAME}        Zillow Clone
+{MX_NAME}         MXEstate
+{CATEGORY}        Real Estate Marketplace Platform
+{DEMO_WEB}        mxestate.mimeld.com
+{PRICE}           $2,899
+{SLUG}            zillow-clone
+{SOLUTION_URL}    https://miracuves.com/zillow-clone/
+{VERTICAL}        real_estate
+
+See /tmp/verticals/real_estate.txt for the vertical config used to generate this README.
+══════════════════════════════════════════════════
 -->
