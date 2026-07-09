@@ -29,10 +29,10 @@ Demo credentials for all environments: **[miracuves.com/zillow-clone → Demo se
 Most real estate scripts stop at "list + view." This platform ships with the features that actually run a property *business*:
 
 - **Map-First Search** — polygon-draw, school districts, commute-time filters — same map-search UX Zillow and Redfin built
-- **Lead Routing Engine** — 
-- **3D Tour Embedding** — zip-code-based, round-robin, performance-weighted agent routing — same lead-routing engine Realtor.com and Zillow use
-- **Mortgage Pre-Qualification** — supports listings across regions with locale-aware price, currency, and measurement units
-- **Multi-Country Property Data** — integrated lenders and pre-qualification flows — what converts visits into contracts
+- **Lead Routing Engine** — zip-code-based, round-robin, performance-weighted agent routing — same lead-routing engine Realtor.com and Zillow use
+- **3D Tour Embedding** — native Matterport and Zillow-3D-Home integration — same tour format listings use today
+- **Mortgage Pre-Qualification** — integrated lenders and pre-qualification flows — what converts visits into contracts
+- **Multi-Country Property Data** — supports listings across regions with locale-aware price, currency, and measurement units
 
 ## 📦 Core Features
 
